@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Navigational Links</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#posts">Posts</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+            <article>
+              <h2>Facts About Dogs</h2>
+              <p>
+              Dogs have a sense of time. It's been proven that they know the difference between a hour and five. If conditioned to, they can predict future events, such as regular walk times.
+              </p>
+            </article>
+            <aside>
+                <p>A study was conducted on dogs being away from their owners for varying hours and the studies show that dogs who were away from their owners the longest showed the greatest amount of affection!
+                </p> 
+            </aside>
+          </section>
+          <figure>
+            <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg" />
+            <figcaption>this is the picture of a DOG</figcaption>
+          </figure>
+          <audio controls>
+            <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3"
+            type="audio/mp3">
+          </audio>
+          <video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls>
+            video not supported
+          </video>
+          <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif">
+      </main>
+      
+      <footer>
+        <p>Contact me at +1 234 567 8910 </p>
+      </footer>
+</body>
+</html>
+<!--
+    Introduction to Semantic HTML
+    When building web pages, we use a combination of non-semantic HTML and Semantic HTML. 
+    The word semantic means “relating to meaning,” so semantic elements provide information about 
+    the content between the opening and closing tags.
+
+    By using Semantic HTML, we select HTML elements based on their meaning, 
+    not on how they are presented. Elements such as <div> and <span> are not semantic elements 
+    since they provide no context as to what is inside of those tags.
+
+    For example, instead of using a <div> element to contain our header information, 
+    we could use a <header> element, which is used as a heading section. 
+    By using a <header> tag instead of a <div>, we provide context as to what information 
+    is inside of the opening and closing tag.
+
+    Why use Semantic HTML?
+
+        Accessibility: Semantic HTML makes webpages accessible for mobile devices and for people with 
+        disabilities as well. This is because screen readers and browsers 
+        are able to interpret the code better.
+
+        SEO: It improves the website SEO, or Search Engine Optimization, 
+        which is the process of increasing the number of people that visit your webpage.
+        With better SEO, search engines are better able to identify the content of your website 
+        and weight the most important content appropriately.
+
+        Easy to Understand: Semantic HTML also makes the website’s source code easier to 
+        read for other web developers.
+
+    To better understand this, you can think of comparing non-semantic HTML to going into a 
+    store with no signs on the aisles. Since the aisles aren’t labeled, 
+    you don’t know what products are in those aisles. However, 
+    stores that do have signs for each aisle make it a lot easier to find the items you need, 
+    just like Semantic HTML.
+
+    1.Header and nav(just to say that it is navigation bar can be used inside header or outside) usage
+
+    2.main to tell that it is the main content(holds all imp content)
+
+    3.footer has the end info contact and all
+
+    4.Article and Section
+        <section> defines elements in a document, such as chapters, headings, 
+        or any other area of the document with the same theme. 
+        For example, content with the same theme such as articles about 
+        cricket can go under a single <section>. 
+        A website’s home page could be split into sections for the introduction, 
+        news items, and contact information.
+
+        The <article> element holds content that makes sense on its own. 
+        <article> can hold content such as articles, blogs, comments, magazines, etc. 
+        An <article> tag would help someone using a screen reader understand where the 
+        article content (that might contain a combination of text, images, audio, etc.) begins and ends.
+
+    5.Aside Element
+        The <aside> element is used to mark additional information that can enhance another 
+        element but isn’t required in order to understand the main content. 
+        This element can be used alongside other elements such as <article> or <section>. 
+        Some common uses of the <aside> element are for:
+            Bibliographies
+            Endnotes
+            Comments
+            Pull quotes
+            Editorial sidebars
+            Additional information
+
+    6.Figure and FigCaption
+        <figure> is an element used to encapsulate media such as an image,
+        illustration, diagram, code snippet, etc, which is referenced in the main flow of the document.
+
+        <figcaption> is an element used to describe the media in the <figure> tag. 
+        Usually, <figcaption> will go inside <figure>. This is different than using a <p> element 
+        to describe the content; if we decide to change the location of <figure>, 
+        the paragraph tag may get displaced from the figure while a <figcaption> 
+        will move with the figure. This is useful for grouping an image with a caption.
+    
+    7.Audio and Attributes
+        The <audio> element is used to embed audio content into a document. 
+        Like <video>, <audio> uses src to link the audio source.
+        Attributes allow us to do many different things to our audio file. 
+        There are many attributes for <audio> but today we’re going to be focusing on controls and src.
+        controls: automatically displays the audio controls into the browser such as play and mute.
+        src: specifies the URL of the audio file.
+
+    8.Video and Embed
+        By using a <video> element, we can add videos to our website. 
+        The <video> element makes it clear that a developer is attempting to display a video to the user.
+        Some attributes that can alter a video playback include:
+            controls: When added in, a play/pause button will be added onto the video along 
+            with volume control and a fullscreen option.
+            autoplay: The attribute which results in a video automatically playing 
+            as soon as the page is loaded.
+            loop: This attribute results in the video continuously playing on repeat.
+            Muted: This attribute sets the volume at zero meaning no sound will come out of the speakers.
+        If you want to show a video from another site, use the <embed> element instead.
+
+        the <embed> tag, which can embed any media content including videos, audio files, 
+        and gifs from an external source. This means that websites that have an embed button 
+        have some form of media content that can be added to other websites. 
+        The <embed> tag is a self-closing tag, unlike the <video> element. 
+        Note that <embed> is a deprecated tag and other alternatives, such as <video>, <audio> and <img>
+-->
+<!--READ ATTRIBUTES FROM DOCS FROM GOOGLE-->
+
+<!--
+    REVIEW
+    Semantic HTML introduces meaning to a page through specific elements that provide context as to what is in between the tags.
+    Semantic HTML is a modern standard and makes a website accessible for people who use screen readers to translate the webpage and improves your website’s SEO.
+    <header>, <nav> , <main> and <footer> create the basic structure of the webpage.
+    <section> defines elements in a document, such as chapters, headings, or any other area of the document with the same theme.
+    <article> holds content that makes sense on its own such as articles, blogs, comments, etc.
+    <aside> contains information that is related to the main content, but not required in order to understand the dominant information.
+    <figure> encapsulates all types of media.
+    <figcaption> is used to describe the media in <figure>.
+    <video>, <embed>, and <audio> elements are used for media files.
+-->

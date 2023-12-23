@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            video Demo
+        </title>
+    </head>
+    <body>
+        <video src="20230723_105338.mp4" width="500px" height="500px" controls autoplay muted loop>
+            video not supported<!--this text only shows if video wont load-->
+            <!--Similar thing we could have done in the audio also but there we used source element-->
+            <!--we can do that here also-->
+        </video>
+        <video src="20230723_105338.mp4" width="500px" height="500px" controls autoplay muted loop>
+            <source src="20230726_190903.webm" type="video/webm">
+            <!--we can have all atributes in video only or in source tag also as in audio we did
+            the type is used to tell the browser that it is of which type now in case
+            the broswer wont play the mp4 only webm then under video tag add two source tags one with each 
+            one webm and other mp4 and specify type so that time browser sees type and play which it can-->
+        </video>
+        <!--can turn video to hyperlink also -->
+        <a href="https://www.google.com" target="_blank" title="click on video">
+            <video >
+                <source src="20230723_105338.mp4" width="500px" height="500px" controls autoplay muted loop>
+            </video>
+        </a>
+
+    </body>
+</html>

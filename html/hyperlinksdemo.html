@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Hyperlink Demo
+        </title>
+    </head>
+    <Body>
+        <p>will see demo of hyperlinks along with use of attributes</p>
+        <br>
+        <hr>
+        <a href="https://www.codecademy.com/learn/learn-html/modules/learn-html-elements/cheatsheet">
+            click me to visit the cheat sheet file of html page
+            <!--just this means once clicked on it,gets redirected not new tab-->
+        </a>
+        <br><br>
+        <a href="https://www.codecademy.com/learn/learn-html/modules/learn-html-elements/cheatsheet" target="_blank">
+            click me and see it open in new tab/window
+        </a>
+        <br><br>
+        <a href="https://www.codecademy.com/learn/learn-html/modules/learn-html-elements/cheatsheet" target="_blank"
+        title="go to codeacademy">
+            click me and see it open in new tab/window and hover and see tooltip
+        </a>
+        <br><br>
+        <a href="ex1songlyrics.html" target="_blank"
+        title="go to parashiva LYRICS">
+            click me and see it go to another webpage but of html ka only
+            <!--this is relative path where we have used our own created file as in same folder direct-->
+        </a>
+        <br><br>
+        <a href="mailto:ckeerthankumar4@gmail.com">
+            click me to send mail to a mail id
+            <!--this is where we use mailto and add our email so begins email procedure-->
+        </a>
+        <!--a is anchor tag for creating hyper links 
+            href in opening used is attributes-->
+        <!--HTML attributes are data that can be added to the opening tag of an HTML element. 
+            These attributes modify the default behavior of the element or 
+            provide additional information about it-->
+
+
+        <!--How to link to the same page but portions of same page by help of ids
+            mainly seen in sites where staring all content given and on click go to
+            different contents(part of same page) like intro and all-->
+        <p id="top">This is the top of the page!</p>
+        <h1 id="bottom">This is the bottom! </h1>
+        <ol>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#bottom">Bottom</a></li>
+        </ol>           
+    </Body>
+</html>
+
+<!--<a href="./contact.html">Contact</a> -->
+<!--In this example, the <a> tag is used with a relative path to link 
+    from the current HTML file to the contact.html file in the same folder.
+    On the web page, Contact will appear as a link.
+
+    A relative path is a filename that shows the path to a 
+    local file (a file on the same website, such as ./index.html) 
+    versus an absolute path (a full URL, like https://www.codecademy.com/learn/learn-html 
+    which is stored in a different folder). 
+    The ./ in ./index.html tells the browser to look for the file in the current folder
+    rather than looking at the root directory.-->
+
+<!--within same href we put same file ka html file it goes to the same file like reloads-->
+
+<!--Linking to Same Page-->
+<!--At this point, we have all the content we want on our page. 
+    Since we have so much content, it doesn’t all fit on the screen. 
+    How do we make it easier for a user to jump to different portions of our page?
+
+    When users visit our site, we want them to be able to click a link and have the page
+     automatically scroll to a specific section.
+
+    In order to link to a target on the same page, we must give the target an id, like this:
+    <p id="top">This is the top of the page!</p>
+    <h1 id="bottom">This is the bottom! </h1>
+    then use 
+    <ol>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#bottom">Bottom</a></li>
+    </ol>
+    this can be done for div many also just diff div also we need to mention the id then use #idname
+-->

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            table demo
+        </title>
+    </head>
+    <body>
+        <h3>Store Hours</h3>
+        <!--Creating Table-->
+        <!--table-> table tag creating
+            tr-> table row
+            th->table header(column ka type)
+            td->table data 
+            border,align,width are attributes
+            each tr tag is one row first row we make header so th tag inside first tr
+            rest tr we make td use to say table data 
+            can add more rows by more tr adding
+
+
+            border in table tells the border
+            align says the content alignment in its cell can be center right and all
+            width gives the width of column
+            obviously for each we can add style and other css
+
+            thead tag to tell the heading(only col heading go in thead i.e with scope="col" only
+            rows ka in body)
+            tbody has all body
+            these two learn more(not more often needed presumed)
+            we can have footer also
+            <tfoot> tag mainly to section the last row like has sum total and all 
+            head,body,foot are used to section the tables
+        -->
+        <table border="1" style="background-color:black;">
+            <thead>
+                <tr align="center" style="background-color:blue;">
+                    <th width="100">Sunday</th>
+                    <th width="100">Monday</th>
+                    <th width="100">Tuesday</th>
+                    <th width="100">Wednesday</th>
+                    <th width="100">Thursday</th>
+                    <th width="100">Friday</th>
+                    <th width="100">Saturday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr align="center" style="background-color:orange;">
+                    <td>Closed</td>
+                    <td>9-5</td>
+                    <td>9-5</td>
+                    <td>9-5</td>
+                    <td>9-5</td>
+                    <td>9-5</td>
+                    <td>9-2</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>column spanning</h3>
+        <table>
+            <tr>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+            </tr>
+            <tr>
+                <td colspan="2">Out of Town</td>
+                <td>Back in Town</td>
+            </tr>
+        </table>
+        <h3>Row Spanning</h3>
+        <table>
+            <tr> <!-- Row 1 -->
+              <th></th>
+              <th>Saturday</th>
+              <th>Sunday</th>
+            </tr>
+            <tr> <!-- Row 2 -->
+              <th>Morning</th>
+              <td rowspan="2">Work</td>
+              <td rowspan="3">Relax</td>
+            </tr>
+            <tr> <!-- Row 3 -->
+              <th>Afternoon</th>
+            </tr>
+            <tr> <!-- Row 4 -->
+              <th>Evening</th>
+              <td>Dinner</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<!--info-->
+<!--
+  <table>
+  <tr>
+    <th></th>
+    <th scope="col">Saturday</th>
+    <th scope="col">Sunday</th>
+  </tr>
+  <tr>
+    <th scope="row">Temperature</th>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+    First, a new row was added to hold the three headings:
+    a blank heading, a Saturday heading, and a Sunday heading.
+    The blank heading creates the extra table cell necessary to align the table headings correctly
+    over the data they correspond to.
+    In the second row, one table heading was added as a row title: Temperature
+
+    Note, also, the use of the scope attribute, which can take one of two values:
+    row - this value makes it clear that the heading is for a row.
+    col - this value makes it clear that the heading is for a column.
+-->
+
+<!--
+    Spanning Columns
+    What if the table contains data that spans multiple columns?
+
+    For example, a personal calendar could have events that span across multiple hours,
+    or even multiple days.
+
+    Data can span columns using the colspan attribute.
+    The attribute accepts an integer (greater than or equal to 1) to denote the number 
+    of columns it spans across.
+    ex:
+    <table>
+        <tr>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+        </tr>
+        <tr>
+            <td colspan="2">Out of Town</td> will be for moday and tuesday together
+            <td>Back in Town</td>
+        </tr>
+    </table>
+-->
+
+<!--
+    Spanning Rows
+    Data can also span multiple rows using the rowspan attribute.
+
+    The rowspan attribute is used for data that spans multiple rows 
+    (perhaps an event goes on for multiple hours on a certain day).
+    It accepts an integer (greater than or equal to 1) to denote the number of rows it spans across.
+    ex:
+    <table>
+            <tr> 
+                <th></th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+            <tr> 
+                <th>Morning</th>
+                <td rowspan="2">Work</td>
+                <td rowspan="3">Relax</td>
+            </tr>
+            <tr> 
+                <th>Afternoon</th>
+            </tr>
+            <tr> 
+                <th>Evening</th>
+                <td>Dinner</td>
+            </tr>
+    </table>
+-->
+
+<!--Review-->
+<!--
+    1.The <table> element creates a table.
+    2.The <tr> element adds rows to a table.
+    3.To add data to a row, you can use the <td> element.
+    4.Table headings clarify the meaning of data. Headings are added with the <th> element.
+    5.Table data can span columns using the colspan attribute.
+    6.Table data can span rows using the rowspan attribute.
+    7.Tables can be split into three main sections: a head, a body, and a footer.
+    8.A table’s head is created with the <thead> element.
+    9.A table’s body is created with the <tbody> element.
+    10.A table’s footer is created with the <tfoot> element.
+    11.All the CSS properties you learned about in this course can be applied to tables and their data.
+-->
