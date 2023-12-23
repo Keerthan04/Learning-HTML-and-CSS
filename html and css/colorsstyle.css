@@ -1,0 +1,46 @@
+/* here we are using external css */
+body{
+    background-color: black;
+}
+h1{
+    color: white;
+}
+#p1{
+    font-size: 20px;
+    color: red;
+}
+#p2{
+    font-size: 20px;
+    color:rgb(0, 255, 255)
+}
+#p3{
+    font-size: 15px;
+    color: hsl(240, 100%, 50%);
+}
+/* to use for specific things of html we make id for the elements and use the #idname and then style it in css*/
+.odd{
+    color:#d2691e
+}
+.even{
+    color:blueviolet
+}
+/*so when we use classes where all ele under same class ka styling we use .classname and style in css */
+/*
+colors can be using normal names 
+or using rgb(then values)
+or hexadecimal format #values
+or hsl format hsl(then one value,2 percentages)
+*/
+
+/*
+    REVIEW
+    The basic anatomy of CSS syntax written for both inline styles and stylesheets.
+    Some commonly used CSS terms, such as ruleset, selector, and declaration.
+    CSS inline styles can be written inside the opening HTML tag using the style attribute.
+    Inline styles can be used to style HTML, but it is not the best practice.
+    An internal stylesheet is written using the <style> element inside the <head> element of an HTML file.
+    Internal stylesheets can be used to style HTML but are also not best practice.
+    An external stylesheet separates CSS code from HTML, by using the .css file extension.
+    External stylesheets are the best approach when it comes to using HTML and CSS.
+    External stylesheets are linked to HTML using the <link> element.
+*/
