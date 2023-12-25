@@ -1,0 +1,39 @@
+/* we instead of linking to google font api we can download the fonts and use the ttf files so download and
+    to use it as locally we use font-family in url we use path  direct or else can be absolute path here(fonts/)
+    then in font-family we write how we shd call it and use like giving it out name
+
+    this to work just remove the linked part from html file and see */
+
+@font-face {
+    src: url(fonts/Roboto-Light.ttf);
+    font-family: Roboto-light;
+}
+@font-face {
+    font-family: Opensans;
+    src: url(fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
+}
+h1{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    /* so font family we say the font type if browser cant of first then we go to the next one so
+       separated by commas */
+}
+p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px; /*(another is em 1 is normal(100%) 1.1 is 110% and so on)*/
+    font-weight: bold;
+    font-style: italic;
+}
+/*use of locally created rorboto-light seen*/
+#p2{
+    font-family: Roboto-Light,"Open-sans","Roboto"; /*so here we use the names f fonts we linked */
+    font-weight: bold;
+    font-style:italic;
+    color:tomato;
+}
+/* we have something called as universal selector 
+    *{
+        border:3px solid red;
+    }
+    the * is universal selector it will change of all (if property of text all text here border so all)
+
+/*
