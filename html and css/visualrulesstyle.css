@@ -1,0 +1,184 @@
+body {
+    /* Old browsers */
+    background: #141E30;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(-45deg, #35577D, #141E30);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(-45deg, #35577D, #141E30);
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    color: #FFF !important;
+    font-size: 2em;
+    padding-top: 100px;
+    width: 100%;
+    font-family: Georgia;
+    text-align: center;
+  }
+  
+  h2 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 100;
+    font-size: 22px;
+    line-height: 24px;
+    padding-bottom: 30px;
+    text-align: left;
+    width: 70%;
+    font-family: Georgia;
+  }
+  
+  p {
+    color: aliceblue;
+    line-height: 1.3em;
+    text-align: left;
+    width: 100%;
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .byline {
+    font-family: Helvetica;
+    color: rgba(255, 255, 255, 0.5);
+    float: left;
+    font-size: 14px;
+    padding-left: 10px;
+    text-transform: uppercase;
+  }
+  
+  .caption {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 14px;
+    margin-left: 20px;
+    padding: 10px;
+    position: relative;
+    top: 80%;
+    width: 60%;
+    background-color: white;
+    color: black;
+  }
+  
+  .content {
+    padding: 40px;
+  }
+  
+  .image {
+    background-image: url('https://content.codecademy.com/courses/freelance-1/unit-2/soccer.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+  }
+  
+  .writer-img {
+    -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+    -moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+    box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+    float: left;
+    width: 50px;
+  }
+  
+/*
+ 1.Font-Family
+    -Use a font family for headings and paragraphs: "Arial", sans-serif;
+    To change the typeface of text on your web page, you can use the font-family property.
+    When setting typefaces on a web page, keep the following points in mind:
+        The font specified must be installed on the user’s computer or downloaded with the site.
+        Web safe fonts are a group of fonts supported across most browsers and operating systems.
+        Unless you are using web safe fonts, the font you choose may not appear the same between 
+        all browsers and operating systems.
+        When the name of a typeface consists of more than one word, it’s a best practice to 
+        enclose the typeface’s name in quotes
+ 
+ 2.Font-size
+    to change the size of text on your web page, you can use the font-size property.
+    we use px or em(important to actually mention units px and all)
+ 
+ 3.Font Weight
+    In CSS, the font-weight property controls how bold or thin text appears
+    The font-weight property has another value: normal. Why does it exist?
+    If we wanted all text on a web page to appear bolded, we could select all text elements 
+    and change their font weight to bold. If a certain section of text was required to appear normal, 
+    however, we could set the font weight of that particular element to normal, essentially 
+    shutting off bold for that element.
+ 
+ 4.Text-align
+    To align text we can use the text-align property. The text-align property will align text 
+    to the element that holds it, otherwise known as its parent.
+    The text-align property can be set to one of the following commonly used values:
+
+    left — aligns text to the left side of its parent element, which in this case is the browser.
+    center — centers text inside of its parent element.
+    right — aligns text to the right side of its parent element.
+    justify— spaces out text in order to align with the right and left side of the parent element.
+
+ 5.Color and Background Color
+    Before discussing the specifics of color, it’s important to make two distinctions about color. Color can affect the following design aspects:
+
+    Foreground color
+    Background color
+    Foreground color is the color that an element appears in. For example, when a heading 
+    is styled to appear green, the foreground color of the heading has been styled. 
+    Conversely, when a heading is styled so that its background appears yellow, the 
+    background color of the heading has been styled.
+
+    In CSS, these two design aspects can be styled with the following two properties:
+
+    color: this property styles an element’s foreground color
+    background-color: this property styles an element’s background color
+
+ 6.Opacity
+    Opacity is the measure of how transparent an element is. It’s measured from 0 to 1, with 
+    1 representing 100%, or fully visible and opaque, and 0 representing 0%, or fully invisible.
+    Opacity can be used to make elements fade into others for a nice overlay effect
+
+ 7.Background Image
+    CSS has the ability to change the background of an element. One option is to make the 
+    background of an element an image. This is done through the CSS property background-image. 
+    Its syntax looks like this:
+        .main-banner {
+            background-image: url('https://www.example.com/image.jpg');
+            }
+    The background-image property will set the element’s background to display an image.
+    The value provided to background-image is a url. The url should be a URL to an image. 
+    The url can be a file within your project, or it can be a link to an external site. 
+    To link to an image inside an existing project, you must provide a relative file path. 
+    If there was an image folder in the project, with an image named mountains.jpg('images/mountains.jpg')
+
+ 8.Important
+    !important can be applied to specific declarations, instead of full rules. 
+    It will override any style no matter how specific it is. As a result, it should almost never be used.
+    Once !important is used, it is very hard to override.
+
+    The syntax of !important in CSS looks like this:
+            p {
+                color: blue !important;
+                }
+
+            .main p {
+                color: red;
+                }
+            Since !important is used on the p selector’s color attribute, all p elements will appear blue, 
+            even though there is a more specific .main p selector that sets the color attribute to red.
+
+            One justification for using !important is when working with multiple stylesheets.
+            For example, if we are using the Bootstrap CSS framework and want to override the styles 
+            for one specific HTML element, we can use the !important property.
+    
+    
+    Review Visual Rules
+    
+    The font-family property defines the typeface of an element.
+    font-size controls the size of text displayed.
+    font-weight defines how thin or thick text is displayed.
+    The text-align property places text in the left, right, or center of its parent container.
+    Text can have two different color attributes: color and background-color. color defines the color of the text, while background-color defines the color behind the text.
+    CSS can make an element transparent with the opacity property.
+    CSS can also set the background of an element to an image with the background-image property.
+    The !important flag will override any style, however it should almost never be used, as it is extremely difficult to override.
+*/
