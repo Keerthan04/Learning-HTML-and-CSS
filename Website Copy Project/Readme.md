@@ -12,7 +12,7 @@
 
 ## About
 
-This project is a replica of a desktop view website created solely using HTML and CSS. The task involved replicating a given website image to practice HTML and CSS skills. While it's optimized for desktop view only, future iterations aim to introduce responsiveness for various screen sizes.
+This project is a replica of a desktop view website created solely using HTML and CSS. The task involved replicating a given website image to practice HTML and CSS skills(the website to replicate is given as Landing Page - Desktop View.png). While it's optimized for desktop view only, future iterations aim to introduce responsiveness for various screen sizes.
 
 ## Features
 
