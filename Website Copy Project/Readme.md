@@ -25,11 +25,11 @@ This project is a replica of a desktop view website created solely using HTML an
 To use this project:
 
 1. Clone the repository: `git clone https://github.com/your-username/project-name.git`
-2. Open the index.html file in a web browser to view the replicated desktop website.
+2. Open the project.html file in a web browser to view the replicated desktop website.
 
 ## Installation
 
-No specific installation steps are required. Simply clone the repository and open the index.html file in a web browser to view the replicated website.
+No specific installation steps are required. Simply clone the repository and open the project.html file in a web browser to view the replicated website.
 
 ## Technologies Used
 
@@ -39,10 +39,6 @@ No specific installation steps are required. Simply clone the repository and ope
 ## Contributing
 
 Contributions to improve responsiveness or add features for different screen sizes are welcome. To contribute, please fork the repository, make changes, and create a pull request with your proposed updates.
-
-## License
-
-This project is open-source under the [MIT License](LICENSE).
 
 ### Additional Notes
 
