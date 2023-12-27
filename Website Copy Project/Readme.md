@@ -20,17 +20,6 @@ This project is a replica of a desktop view website created solely using HTML an
 - Beginner-friendly project ideal for practicing HTML and CSS skills.
 - Ready-made desktop view website layout.
 
-## Usage
-
-To use this project:
-
-1. Clone the repository: `git clone https://github.com/your-username/project-name.git`
-2. Open the project.html file in a web browser to view the replicated desktop website.
-
-## Installation
-
-No specific installation steps are required. Simply clone the repository and open the project.html file in a web browser to view the replicated website.
-
 ## Technologies Used
 
 - HTML
