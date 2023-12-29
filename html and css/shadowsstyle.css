@@ -1,0 +1,13 @@
+h1{
+    text-shadow: 5px 1px 3px hsl(0, 59%, 67%), -5px 1px 3px hsl(231, 59%, 67%);
+    /*horizontal offset,vertical offset(pos of shadow),blur(3rd one) then color
+    can add more than one shadow just by comma separated */
+}
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: #c71818;
+    box-shadow: 3px 3px 5px black;
+}
+/* when just div given and its height and width given it becomes as a box or else it will not work
+so when box we apply box-shadow:(hori offset,vertical offset,blur,color)
