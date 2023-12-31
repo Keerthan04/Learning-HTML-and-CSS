@@ -1,0 +1,296 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+.button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #34B3A0;
+    color: #fff;
+  }
+  
+  .button span,
+  .button .icon {
+    position: absolute;
+    display: block;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .button span {
+    width: 72%;
+    left: 0px;
+    line-height: inherit;
+    font-size: 22px;
+  }
+  
+  .button .icon {
+    right: 0;
+    width: 28%;
+  }
+  
+  .button .icon .fa {
+    font-size: 30px;
+    vertical-align: middle;
+  }
+  
+  .button span, 
+  .button div, 
+  .button i {
+    transition: all 1.2s ease-out 0.2s;
+  }
+  
+  .icon {
+    width: 200px;
+    background-color: #1A7B72;
+  }
+  
+  .button:hover span {
+    left: -72%;
+  }
+  
+  .button:hover .icon {
+    width: 100%;
+  }
+  
+  .button:hover .icon .fa {
+    font-size: 45px;
+  }
+html,
+body {
+  margin-top: 50px;
+  height: 100%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.game {
+  position: relative;
+  display: inline-block;
+  height: 60%;
+}
+
+.game img {
+  cursor: pointer;
+}
+
+.game .safari {
+  margin-top: 50px;
+  height: 430.188px;
+  width: 573.578px;
+}
+
+.game .gazelle {
+  position: absolute;
+  top: 260px;
+  left: 231px;
+  z-index: 1;
+  max-height: 50px;
+  transition-property: max-height;
+  transition-duration: 750ms;
+  transition-timing-function: linear;
+  transition-delay: 400ms;
+  /*transition: max-height 750ms linear 400ms;*/
+}
+
+.game .gazelle:hover {
+  max-height: 180px;
+}
+
+/*
+  1.Basic demo
+    assume The web page in the browser contains a link styled as a button.(hover added to change bg color)
+
+    Currently, the background color abruptly changes from orange to green when you move your mouse over it. Let’s make this transition smoother.
+
+    In style.css, find the rule for <a> elements, and add a declaration to transition the 
+    background-color property over a duration of two seconds. It should look like this:
+
+    a {
+    transition-property: background-color;
+    transition-duration: 2s;
+    }
+    now transition change is seen 
+    final code
+    a {
+        display: block;
+        width: 300px;
+        padding: 31px 5px;
+        border-radius: 5px;
+        margin: 20% auto;
+        background-color: orange;
+        text-align: center;
+        font-family: Helvetica;
+        font-size: 32px;
+        color: mintcream;
+        transition-property: background-color;
+        transition-duration: 2s;
+    }
+
+    a:hover {
+        background-color: limegreen;
+    }
+
+  2.Duration
+    To create a simple transition in CSS, we must specify two of the four aspects:
+
+    The property that we want to transition.
+    The duration of the transition.
+
+    a {
+    transition-property: color;
+    transition-duration: 1s;
+    }
+
+    In the example above, transition-property declares which CSS property we will be transitioning, 
+    the text color. The second property, transition-duration, declares how long the transition will 
+    take — one second.
+
+    Many properties’ state changes can be transitioned. The type of transition depends on the 
+    property you choose. For a complete list of all animated properties, see this resource.
+
+    Different properties transition in different ways, for example:
+
+    Color values, like color and background-color, will blend to a new color.
+    Length values like font-size, width, and height will grow or shrink.
+    Duration is specified in seconds or milliseconds, such as 3s, 0.75s, 500ms. The default value is 0s, 
+    or instantaneous, as if there is no transition.
+
+    When choosing a duration, think about how long actions take in real life. For example, 
+    a human eye blink takes around 400ms. People might expect the animation of clicking a button to be 
+    as sudden as a blink.
+
+  3.Timing Function
+    The next transition property is transition-timing-function. The timing function describes the pace 
+    of the transition.
+
+    The default value is ease, which starts the transition slowly, speeds up in the middle, and slows 
+    down again at the end.
+
+    Other valid values include:
+
+    ease-in — starts slow, accelerates quickly, stops abruptly
+    ease-out — begins abruptly, slows down, and ends slowly
+    ease-in-out — starts slow, gets fast in the middle, and ends slowly
+    linear — constant speed throughout
+
+    transition-property: color;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+
+    In the example above, the text color will be animated over one second. The timing function is 
+    ease-out which means it will begin abruptly and slow down as it ends.
+    (see above css where we did property max height mentioned it in hover so when hovered height increases)
+
+  4.Delay
+    Our last transition property is transition-delay. Much like duration, its value is an amount of time. 
+    Delay specifies the time to wait before starting the transition. As with the duration property, 
+    the default value for transition-delay is 0s, which means no delay.
+
+    transition-property: width;
+    transition-duration: 750ms;
+    transition-delay: 250ms;
+
+    In the example above, a change in the width of the element will start after a quarter of a second, 
+    and it will animate over three quarters of a second.
+
+  5.Shorthand
+    Now that we’ve explored each transition property, you may find yourself with many CSS rule sets that 
+    look like the code below.
+
+    transition-property: color;
+    transition-duration: 1.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.5s;
+
+    Because these four properties are so frequently declared together, CSS provides a property that can 
+    be used to declare them all in one line: transition. This shorthand property describes each aspect of 
+    the transition puzzle in a single declaration. The properties must be specified in this 
+    order: transition-property, transition-duration, transition-timing-function, transition-delay.
+
+    transition: color 1.5s linear 0.5s;
+
+    In the example above, we have refactored the four lines of code in the previous example into one 
+    concise line. This example will cause any change in text color to transition at constant 
+    speed over 1.5 seconds, after a delay of 0.5 seconds.
+
+    Leaving out one of the properties causes the default value for that property to be applied. 
+    There is one exception: You must set duration if you want to define delay. Since both are time values, 
+    the browser will always interpret the first time value it sees as duration.
+
+  6.Combinations
+    The shorthand transition rule has one advantage over the set of separate transition-<property> rules: 
+    you can describe unique transitions for multiple properties, and combine them.
+
+    To combine transitions, add a comma (,) before the semicolon (;) in your rule. 
+    After the comma, use the same shorthand syntax. For example:
+
+    transition: color 1s linear,
+    font-size 750ms ease-in 100ms;
+
+    The above code transitions two properties at once. The text color transitions over one second with 
+    linear timing and no delay. At the same time, the font size transitions over 750 milliseconds 
+    with an ease-in timing and a 100 millisecond delay. This “chaining” is a powerful tool for 
+    expressing complicated animations.
+
+    .button span,
+    .button div,
+    .button i {
+        transition: width 750ms ease-in 200ms,left 500ms ease-out 450ms,font-size 950ms linear;
+    }
+    When the button is hovered, its child elements will individually transition their left, width, and 
+    font-size properties separately.
+
+  7.All
+    Even with the shorthand, specifying transitions for many properties can be tedious. 
+    It is common to use the same duration, timing function, and delay for multiple properties. 
+    When this is the case you can set the transition-property value to all. This will apply the 
+    same values to all properties. To effect this, you can use all as a value for transition-property.
+
+    all means every value that changes will be transitioned in the same way. 
+    You can use all with the separate transition properties, or the shorthand syntax. 
+    This allows you to describe the transition of many properties with a single line:
+
+    transition: all 1.5s linear 0.5s;
+
+    In this example, any change will be animated over one and a half seconds after a half-second delay 
+    with linear timing.
+
+
+
+CSS Transitions are a powerful tool for providing visual feedback to users. We’ve learned a lot about transitions, so let’s review:
+
+CSS Transitions have 4 components:
+
+A property that will transition.
+The duration which describes how long the transition takes.
+The delay to pause before the transition will take place.
+The timing function that describes the transition’s acceleration.
+A simple transition can be described with a property and a duration, which can be written like this:
+
+transition-property: color;
+transition-duration: 1s;
+
+Many properties’ state changes can be transitioned, including color, background color, font size, width, and height. all is also a valid transition property that causes every changing property to transition.
+
+The shorthand property transition can be used to describe all four components of a transition at once. By using the comma (,) operator, many transitions can be described in one CSS rule.
+
+If you want to learn more about CSS Transitions, we recommend MDN’s Using CSS Transitions doc.
+
+Good work, you now have the tools to make your web pages come to life!
+*/
