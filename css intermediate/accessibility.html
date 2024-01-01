@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility </title>
+    <link href="accessibilitystyle.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href='#' class='nav-link'>Home</a>
+        <a href='#' class='nav-link'>My Account</a>
+      </nav>
+      <div class='page-container'>
+        <div class='form-title'>
+          <h2>Codecademy Survey</h2>
+          <p class='instructions'>
+            Welcome to the Codecademy Survey! In this survey, you will be asked a series of question about your knowledge of <abbr title='Cascading Style Sheets'>CSS</abbr> to gauge your proficiency and determine placement within the course.  Please answer these questions to the best of your ability. If you get stuck along the way, you can always consult the <a href='www.google.com'>forum</a> for help. Happy coding!
+          </p>
+        </div>
+        <div class='form-container'>
+          <form class='survey-form'>
+            <div class='input-container'>
+              <label>Question #1</label>
+              <input type='text'/>
+            </div>
+            <div class='input-container'>
+              <label>Question #2</label>
+              <input type='text'/>
+            </div>
+            <div class='input-container'>
+              <label>Question #3</label>
+              <input type='text'/>
+            </div>
+            <div class='input-container'>
+              <label>Question #4</label>
+              <input type='text'/>
+            </div>
+            <div class='input-container'>
+              <label>Question #5</label>
+              <input type='text'/>
+            </div>
+          </form>
+          <div class='protected-link-container'>
+            <a href='#'>Get premium help</a>
+          </div>
+          <div class='survey-btn-container'>
+            <button class='btn submit-btn' aria-hidden='true'>
+              <span class='fa fa-paper-plane'></span>
+              Submit
+            </button>
+            <button class='btn'>Reset</button>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
+<!--
+  learn more: https://a11y.coffee/start-testing/ 
+  Introduction to Web Accessibility
+    Have you ever visited a website that seemed hard to use or navigate? Perhaps you couldn’t tell if an 
+    element was interactive or couldn’t read some of the text due to size issues. Chances are this has 
+    happened to you at least once, and it can be extremely frustrating. These problems that you encountered 
+    were likely the result of poor web accessibility.
+
+    Web accessibility is one of those aspects of web development where its presence, when implemented 
+    correctly, goes unnoticed, but its absence can destroy the user experience. There are a variety of 
+    considerations to make when making a website accessible, ranging from the size and color of the text 
+    to invisible properties that are processed by assistive tools such as screen readers.
+
+    Learning how to harness and apply the fundamental aspects of web accessibility should be a top 
+    priority for any developer looking to build an amazing, inclusive experience for all users.
+-->

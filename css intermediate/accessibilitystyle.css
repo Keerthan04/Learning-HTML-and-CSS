@@ -1,0 +1,368 @@
+html {
+    height: 100%
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+  
+  a:visited {
+    color: purple;
+  }
+  
+  input[type="text"] {
+    display: block;
+    width: 100%;
+    border-color: #808080;
+    outline: none;
+    border-style: solid;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus {
+    border-color: blue;
+  }
+  
+  nav {
+    background: lightgray;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    margin: 0
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #000000
+  }
+  
+  .page-container {
+    padding: 30px;
+    display: flex;
+    height: 90%;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  
+  .form-title {
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .instructions {
+    text-align: left;
+    min-width: 45ch;
+    max-width: 85ch;
+  }
+  
+  .form-container {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    flex-direction: column;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+  
+  .survey-form {
+    background: #C3C3C3;
+    color: #000000;
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 30px 20px;
+  }
+  
+  .survey-form input {
+    border-color: #000000;
+  }
+  
+  .survey-btn-container {
+    display: flex;
+    height: 10%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding : 0 20px;
+  }
+  
+  .btn {
+    height: 50px;
+    width: 47%;
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+  }
+  
+  .protected-link-container {
+    text-align: right;
+    padding: 20px 0;
+  }
+  
+  .protected-link-container a {
+    display: none;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-container label {
+    padding: 5px 0;
+    font-size: 20px;
+  }
+  @media print{
+    nav{
+      display: none;
+    }
+    a[href^="http"]:after {
+      content: " (" attr(href) ")";
+    }
+  
+  }
+
+/*
+  1.Visual Readability: Scale
+    Font size has a large impact on the readability of content on a web page. If the font is too small or 
+    large, it can become difficult to read depending on the user’s distance from the screen. Over time, 
+    the font-size property has increased to match these accessibility concerns—arising, in part, from 
+    the introduction of multi-size devices to the digital space, including Smart TVs, tablets, phones, etc. 
+    While the size of a web page’s text largely depends on the typeface used, a minimum size between 18 to 20 
+    pixels is recommended for smaller screen sizes.
+
+    Line height, or the spacing between lines of text, also contributes heavily to readability. 
+    If the line-height property’s value is too small, lines will appear too close together. If the 
+    line-height is too large, lines will be separated by too much distance. The default value of 
+    line-height in browsers is around 1.2—however, Web Content Accessibility Standards recommend a minimum 
+    of 1.5 within paragraphs.
+
+    Lastly, the letter-spacing property provides additional visual clarity by controlling the space 
+    between individual letters in a word—the value of letter-spacing property defaults to normal in browsers. 
+    Providing a value to this property (for example, 0.5em) will expand or contract the space between letters.
+    Letter spacing is also accessible from screen readers’ perspective as it allows characters to be 
+    spaced without the use of actual space characters ( ). Some screen readers will read each letter 
+    individually if spacing characters are used, which will make the text incomprehensible to users.
+
+  2.Visual Readability: Structure
+    Text alignment and paragraph width on a page are important things to consider when creating the 
+    text layout. When there is too much space between words or the paragraph width is too wide, 
+    it makes the text difficult to read. We can avoid this by using the text-align and width properties 
+    to set appropriate values like the below example code.
+
+    p {
+    text-align: left;
+    width: 400px;
+    }
+
+    Generally, it is recommended to align text using left, right, or center values. The justify value 
+    can also be used but can cause a decrease in readability because it creates uneven word spacing to 
+    create equal line lengths.
+
+    Paragraph width can also impact readability. It is recommended to have 45 to 85 characters per line, 
+    with the ideal being suggested as 65 characters. In the above example, we set the width using px as 
+    the unit of measure. A more appropriate unit for this purpose is the ch unit, with 1ch being equivalent 
+    to the width of the zero (0) character. The ch unit also scales with changes in the value of 
+    the font-family or font-size property.
+
+  3.Visual Readability: Color
+    Color plays a major role in a user’s ability to read the information located on a page. If colors 
+    lack sufficient contrast, they can become hard to distinguish from one another. Oftentimes, text 
+    can become lost in the background color, which prevents users, especially those with vision impairments, 
+    from reading it. The solution to this is to provide adequate contrast between foreground and 
+    background elements. To understand contrast, we must first understand where it comes 
+    from: the color wheel.
+
+    diagram of the color wheel(cheetsheets)
+
+    Two colors are contrasting when they are from different segments of the color wheel. Thus, 
+    the farther apart the segments, the higher the contrast between the two colors. The difference 
+    between the two colors is known as the contrast ratio and a minimum contrast ratio must be met in 
+    order to adhere to accessibility standards. The minimum contrast ratio denotes how high the contrast 
+    is between the text of certain sizes and width on a specific background. This ratio can 
+    range from 1:1, where both compared colors are the same, to 21:1, where the two colors are black and white.
+
+    contrast ratio
+
+    According to the Web Content Accessibility Guidelines (WCAG), contrast ratios are classified using 
+    a 3-tier hierarchy:
+        Level A is the minimum level.
+        Level AA includes all Level A and AA requirements. Many organizations strive to meet Level AA.
+        Level AAA includes all Level A, AA, and AAA requirements.
+
+    The recommended minimum contrast ratios between the background and its text using these standards 
+    are as follows:
+        4.5:1 (AA criteria)—Text that is less than 24px (not bold) and 19px (bold).
+        3:1 (AA criteria)—Text larger than 24px (not bold) and 19px (bold).
+        7:1 (AAA criteria)—Text that is less than 24px (not bold) and 19px (bold).
+        4.5:1 (AAA criteria)—Text larger than 24px (not bold) and 19px (bold).
+
+    There are a variety of tools that can be used to determine contrast ratios. The Chrome Canary browser
+    has a built-in contrast ratio display inside its developer tools. Another popular stand-alone tool 
+    is WebAIM.
+    (forms and all input fields shd have borders so contrast there)
+
+  4.Contextual Readability: Interactivity
+    Accessibility isn’t only about being able to read text or see elements on a web page. Another facet of 
+    accessibility is providing context clues to users to show them additional information about the 
+    elements they are viewing. For instance, information or concepts comprised of multiple words is 
+    often abbreviated (e.g., CSS stands for Cascading Style Sheets). As a provider of the information, 
+    a web page should make the full definition available to users. This can be done using the <abbr> element. 
+    Hovering over the text contained in this element will display an alternative name for it to the user.
+
+    <abbr title='Cascading Style Sheets'>CSS</abbr>
+
+    Another simple way to convey interactivity is with links. Styling links in a unique way allows users to 
+    discern them from other text that may surround them. One way to do this is by underlining links. 
+    It is generally advisable to leave underline styling on links to provide clarity.
+
+    a {
+    text-decoration: underline;
+    }
+
+    Plain text isn’t the only source of information on pages, however. Interactive elements such as 
+    buttons can also exist. To indicate that something is interactive on a page, users should be given 
+    contextual clues in addition to design-based clues. The most common way to denote interactivity is 
+    with the cursor. Using the cursor property, the mouse cursor can be changed to show a visual 
+    representation of potential interactivity.
+
+    .button {
+    cursor: pointer;
+    }
+
+  5.Contextual Readability: Color
+    Color can also be used as a contextual indicator of intent or meaning. One simple way to convey 
+    additional information to the user using color is in the form of links. Many times, links will be 
+    present on web pages that will bring users to other sources of information. To let users know they 
+    have visited a link from your page previously, the :visited selector can be used. This selector will 
+    apply styling to links that the user has already clicked. The most common style applied via this 
+    selector is a color change.
+
+    a:visited {
+    color: purple;
+    }
+
+    Navigation is another contextual use for color. When elements are focused, they will often have 
+    styling applied to denote where the focus is being applied. This is critical for navigation, 
+    especially with modalities other than the mouse, such as the keyboard. Without the :focus selector 
+    providing additional styling, often using color or shadowing to show focus, users would not know where 
+    they were on the page when navigating using means other than a mouse.
+
+    input:focus {
+    border-color: blue;
+    }
+    ex
+    input[type="text"]:focus{
+        border-color: blue; (so when on one text feild it will be blue border around it telling users)
+        }
+
+    An additional common use case for contextual use of color is in the indication of 
+    success and error states. This can most often be seen in form validation, where accepted 
+    field values will turn an input green and rejected fields will be colored red.
+
+  6.Visibility
+    Inevitably, at some point, a web page will need to hide content from users somehow. There are a 
+    variety of ways to do this, but each one has different use cases and implications.
+
+    The first way that content could be hidden is by hiding it from everyone. In this case, everyone 
+    refers to both human users viewing the web page and screen readers. To hide content from everyone 
+    in this manner, you can set the visibility property to hidden or set the display property to none.
+
+    The second method is to hide content only visually. This means that content will still be accessible 
+    to screen readers, but not human users. This method is more complex as browser quirks can come into play, 
+    and considerations needing to be made around focusing the elements via things like keyboard navigation.
+
+    The third method is to hide the content semantically, hiding it from screen readers only but 
+    displaying it visually. This method is useful for obscuring content that provides no meaningful 
+    context to screen reader users, such as decorative icons and repeated text. This can be done by setting the aria-hidden HTML attribute to 'true':
+
+    <p class='hidden-sentence' aria-hidden='true'>This is hidden from screen readers!</p>
+
+    Additionally, styling with specific values for text-indent, font-size, or height can produce the 
+    same result but with caveats.
+
+  7.Design Reflecting Structure
+    An important consideration when applying CSS to a page is the relationship that the CSS stylesheet has 
+    with the HTML document’s underlying structure. This relationship may not seem very important, but if 
+    mismanaged or ignored, it can have a huge impact on the accessibility and navigability of a web page.
+
+    Take a list of elements, for instance, that is styled to look like the image gallery below:
+
+    Picture of image gallery (Pinterest-like layout)
+
+    At first glance, this gallery seems fine, especially to users who do not have special accessibility needs, 
+    but any attempt to navigate this board without a mouse would say otherwise. The order of the elements 
+    visually is completely different from their order in the DOM. This will lead to an increased difficulty 
+    for a user using alternative navigation methods from navigating the page properly.
+
+    Additionally, screen readers process the order of the DOM, so it is possible to have a mismatch 
+    between what is visually presented and what is being read. In this case, the screen reader would 
+    read the elements seemingly out of order relative to how they are displayed on the page.
+
+    Due to these considerations, it is important to order the content on your page to make sense in the 
+    absence of styling. This will lead to a uniform experience for all users
+
+  8.Accessibility Across Mediums
+    So far, we have been very concerned with how our page looks on screens, but we haven’t been 
+    considering the other ways in which users can consume the content of your web page. For example, 
+    how does the page look when printed? Luckily, there are some ways a page can be made more accessible, 
+    even when viewed on paper.
+
+    One way to do this is to use media queries, specifically the @media print query:
+
+    @media print {
+    nav {
+        display: none;
+    }
+    }
+
+    The above code snippet causes the nav element to be removed when the page is printed. This is useful 
+    for reducing clutter on the page, especially for elements with no real benefit from being present on 
+    paper as they cannot be accessed properly.
+
+    Print media queries can also be used to display values of elements that otherwise couldn’t be understood. 
+    For example, we can display the value of the href attribute when printed so the user can still 
+    have access to the link. To expose an href in printed form, the following code can be used:
+
+    @media print {
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        }
+    }
+
+Review
+There are a lot of considerations to make when it comes to accessibility. Let’s take some time to review the key considerations:
+
+Text should be at least 18px in size, and paragraphs should have a line-height of at least 1.5 to increase the readability of content.
+Color contrast between elements should be at least 4.5:1 for standard font sizes.
+Interactive elements should have a visual appearance denoting interactivity, such as underlined links and pointer cursor.
+Abbreviated content should be given additional content via the <abbr> element.
+When hiding elements from users, use visibility: hidden; or display: none; to hide content from both assisted and non-assisted users.
+Visual display should reflect the structure of the presented elements within the HTML to provide navigational coherence for assisted and non-assisted users.
+Design pages for consumption in different mediums such as print.
+
+learn more: https://a11y.coffee/start-testing/ 
+*/

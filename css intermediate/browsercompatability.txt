@@ -1,0 +1,112 @@
+    Browser Compatibility
+What is your default browser? Is it Chrome, Firefox, Safari, or Microsoft Edge? These are just a few of the 
+many browsers used to view websites.
+
+If you’ve ever visited a website and noticed that it loaded differently in Chrome versus Firefox, this 
+is because each browser renders a website slightly differently. To ensure that users experience a website 
+the same way across browsers, we need to consider browser compatibility—the ability for a website to be 
+rendered in the same way across all available modern browsers. In this lesson, we will learn about the 
+different issues related to browser compatibility when building a website.
+
+The main types of browser compatibility problems include:
+1. Cross-Browser Rendering Differences - This occurs when elements render differently on different browsers. For example, an element may appear as though
+- Cross-browser rendering differences (e.g., font smoothing)
+- Differences in JavaScript behavior between browsers
+- CSS3 features not supported by some older browsers
+- HTML5 video/audio tags may not work on every device
+To address these issues, developers can use various techniques such as progressive enhancement, feature detection,
+To address these issues, developers can use various techniques such as using polyfills, fallbacks,
+and progressive enhancement.
+
+    Checking Availability
+Every now and then, exciting new HTML, CSS, and JavaScript features get released. However, these new 
+features may not be immediately usable because different browsers adopt new web features at different speeds. 
+For example, Internet Explorer did not support many CSS3 features until Microsoft Edge was released, 
+even though many other browsers had already adopted these features by that point.
+
+The availability of CSS features differs across browsers and their versions. Using a CSS property 
+supported only on select browsers will create inconsistent experiences for users. Thankfully, there 
+are tools such as caniuse.com that can help you find out what browsers support a particular CSS feature.
+
+    Browser Defaults
+Browsers are based on browser engines—the core component responsible for rendering HTML, CSS, and JavaScript 
+in the browser. For example, Chrome, Opera, and Edge use Blink as their browser engine, whereas Firefox 
+uses Gecko and Safari uses Webkit. Each of these engines renders features such as margins, padding, colors, 
+or text slightly differently. This is because different browsers have different default styles.
+
+For example, the default text color of the <a> element in most browsers is #0000EE, but in 
+Internet Explorer 11, the value is #0066cc. We can use tools such as browserdefaultstyles.com to 
+compare default styles across browsers.
+
+There are also tools that we can use, such as normalize.css and minireset.css, to eliminate 
+differences between browser default styles and ensure that all elements are rendered the same 
+way across browsers.
+example
+    Most browsers will style <li> elements using bullets, but not all browsers agree on the size or 
+    placement of those bullet points. In Firefox, the bullets will be flush to the text, but in Chrome, 
+    they are not.
+
+    In Chrome, Safari, and Internet Explorer, the default value of the font-weight property of the <strong> 
+    element is bold, but in Firefox, the default value is bolder.
+
+for both examples above to make cure we can do
+    inside the ul selector ruleset, set the list-style property to be none. Then, inside the strong selector 
+    ruleset, explicitly set font-weight to be bold
+
+    Vendor Prefixes
+Vendor prefixes are prefixes for property names that were developed as a way of testing new CSS features 
+or standards before browsers fully supported them. These prefixes were never intended to be used on 
+production websites, but they are sometimes required to use certain new and cutting-edge features or 
+to support older versions of browsers when those features were cutting edge.
+
+Common vendor prefixes include:
+    -webkit- for Chrome, Safari, newer versions of Opera, and almost all iOS browsers, including Firefox for iOS
+    -moz- for Firefox
+    -ms- for Internet Explorer and Microsoft Edge
+    -o- for old pre-WebKit versions of Opera
+Eventually, these experimental features are fully adopted into all browsers, at which point the vendor 
+prefix is no longer required. Remember that browsers adopt features at different rates—for newer CSS 
+features, you may need to include prefixed property names alongside. An example of this for the transform 
+property would be as follows:
+
+.tilted {
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+Rather than looking through every CSS feature on your site to determine which features require 
+vendor prefixes, you can also use tools such as Autoprefixer to automatically include all vendor 
+prefixes for the features that require them.
+
+    Polyfills
+It’s difficult to keep track of which CSS properties are not supported in certain browsers and their versions. 
+Polyfills are JavaScript codes that allow older browsers to behave as though they understand more advanced 
+features than they actually do. These codes rewrite the HTML and CSS codes to simulate features that have 
+not yet been adopted by that version of the browser.
+
+For example, the text-shadow property is not supported in some older versions of Internet Explorer and 
+Firefox but can be simulated using other CSS properties. Using JavaScript, we can replace CSS declarations 
+depending on which browser version a user is using to view the website.
+
+For a more comprehensive solution, we can use tools such as Modernizr or Polyfill.io to automatically 
+identify and provide all of the polyfills that our website might need, ensuring that it can run as smoothly
+as possible on older browsers.
+
+    to use polyfillo.io we can do
+Polyfill.io will check and apply polyfills for CSS features that are not natively supported by older browsers.
+
+Inside the <head> element of index.html, add the following <script> element:
+
+<script src="https://polyfill.io/v3/polyfill.min.js"></script>
+
+Review
+We can check whether a CSS feature is available on specific browsers using tools like caniuse.com.
+Browsers have default styles which we can check using resources like browserdefaultstyles.com.
+We sometimes need to use browser-specific prefixes, especially for new CSS features.
+Polyfills provide a way to support newer web features on older browsers.
+
+Learn More(!!IMPORTANT!!)
+https://www.codecademy.com/courses/learn-intermediate-css/articles/css-feature-queries
