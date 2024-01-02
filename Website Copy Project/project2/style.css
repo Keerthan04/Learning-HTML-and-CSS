@@ -18,6 +18,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
 }
 .main-body{
     height:63%;
@@ -88,7 +89,7 @@ form {
     font-weight: bold;
     color: black;
     font-size: 1em;
-    height: 80%; /* Adjust the height of the form within the right-body */
+    height: 100%;
 }
 
 input[type="text"], input[type="password"] {
