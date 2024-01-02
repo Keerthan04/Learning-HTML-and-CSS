@@ -20,7 +20,22 @@
                 </div>
             </div>
             <div class="right-body">
-
+                <div><h3>Login</h3></div>
+                <div><form action="index.php" method="POST" enctype="multipart/form-data">
+                        <div><label for="email">Email</label></div>
+                        <div><input type="text" id="email" placeholder="john@example.com" minlength="6" maxlength="10" required/></div>
+                        <div><label for="password">password</label></div>
+                        <div><input type="password" id="password" placeholder="Enter password" minlength="6" maxlength="10" required/></div>
+                        <div><label for="tc">By creating and account,you agree to the Terms and Conditions</label></div>
+                        <div><input type="checkbox" id="tc"/></div>
+                        <div>
+                            <button>
+                                Create an Account
+                            </button>
+                    </div>
+                    </form>
+                </div>
+                
             </div>
         </div>
     </main>
