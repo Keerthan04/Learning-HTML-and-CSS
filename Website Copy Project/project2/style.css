@@ -57,10 +57,14 @@ main{
 }
 .img-sec{
     width: 100%;
-    height: 70%;
-    background-color: black;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    position: absolute;
 }
 .img-sec img{
-    height:70%;
+    height:100%;
     width:auto;
+    position: absolute;
 }
