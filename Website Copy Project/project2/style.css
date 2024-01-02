@@ -3,3 +3,64 @@
     padding: 0;
     margin: 0;
 }
+@font-face {
+    font-family: "Roboto";
+    src: url("Roboto-Light.ttf");
+}
+body{
+    background-image: url("Background.png");
+    background-size: cover;
+    position: relative;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-body{
+    height:63%;
+    width: 50%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+}
+.left-body{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(7, 43, 44);
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    text-align:center;
+}
+.heading h3{
+    font-family: "Roboto";
+    font-size: 1.7em;
+    color:white;
+}
+.heading p{
+    font-family: "Roboto";
+    font-size: 0.8em;
+    margin: 10px;
+    color:rgb(32, 152, 199);
+}
+.img-sec{
+    width: 100%;
+    height: 70%;
+    background-color: black;
+}
+.img-sec img{
+    height:70%;
+    width:auto;
+}
