@@ -57,8 +57,8 @@ main{
     color:rgb(32, 152, 199);
 }
 .img-sec{
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     display: flex;
     justify-content:center;
     align-items: flex-start;
@@ -136,9 +136,33 @@ button{
     min-width:70%;
     padding-left: 2%;
 }
-@media  screen and (max-width: 720px) {
-    .main-body{
+@media screen and (max-width: 1080px) {
+    .main-body {
         display: flex;
         flex-direction: column;
+        align-items: center; /* Center content horizontally */
+        justify-content: center; /* Center content vertically */
+        height: 100vh; /* Occupy full viewport height */
+    }
+    .left-body,
+    .right-body {
+        width: 90%; /* Take up 90% of the viewport width */
+        min-height: auto; /* No fixed height */
+        margin: 10px 0; /* Add margin for spacing between sections */
+    }
+    .img-sec,
+    .img-sec img {
+        position: static; /* Let the images appear naturally in the flow */
+        width: 100%; /* Occupy full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .button {
+        position: static; /* Allow buttons to flow naturally */
+        width: 100%; /* Occupy full width */
+        margin: 10px 0; /* Adjust margin for better spacing */
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: 100%; /* Occupy full width */
     }
 }
