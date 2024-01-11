@@ -8,10 +8,11 @@ html,body{
     height: 100%;
 }
 a{
+    pointer-events: all;/* to make only a and buttons clickable */
     text-decoration: none;
     color:white;
     font-family: 'gilroy';
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
 }
 .main{
@@ -22,19 +23,23 @@ a{
     width:100%;
     height:100vh;
 }
+.back img{
+    width: 100%;
+    height:100vh;
+    object-fit: cover;
+}
 .top{
+    pointer-events: none;/*to prevent clicking on my top layer */
     position:absolute; /* so that it is always on top */ 
     top: 0;
     left: 0;
     width:100%;
     height:100vh;
-    background-color: black;
     display:flex;
 }
 .working-area{
     width:80%;
     height:100vh;
-    background-color: black;
     margin: 0 auto;
     position: relative;
 }
@@ -89,11 +94,13 @@ a{
     overflow: hidden;
 }
 .content-left button{
-    font-size: 3vw;
+    font-size: 2.5vw;
     padding: 0.8vw 4vw;
     margin-top: 1vw;
     background-color: rgb(226, 226, 226);
     font-family: "kajiro";
+    pointer-events: all;
+    cursor: pointer;
 }
 .content-right p{
     text-align:right;
@@ -105,8 +112,10 @@ a{
     height:170px;
     margin-top:20px;
     margin-bottom: 25px;
-    background-color: red;
+    background-image: url("potrait.avif");
+    background-size: cover;
+    background-position: center;
 }
-.content-right p:nth-child(3){
-    margin-bottom: 50px;
+.content-right p:nth-child(3){/*used for getting childs of parent */
+    margin-bottom: 30px;
 }
