@@ -1,3 +1,4 @@
+//for animation of photos
 Shery.imageEffect(".back",{style:5, config: 
     {"a":{"value":2,"range":[0,30]},"b":{"value":-0.62,"range":[-1,1]},
     "zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":2.2224052718286655},
@@ -13,6 +14,7 @@ Shery.imageEffect(".back",{style:5, config:
     "antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},
     "noise_scale":{"value":10,"range":[0,100]}}, gooey: true})
 
+    //for headings change
    var elems=document.querySelectorAll(".heading");
    elems.forEach(function(heading){
     var h1s = heading.querySelectorAll("h1");
