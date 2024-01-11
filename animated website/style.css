@@ -83,14 +83,22 @@ a{
     display: flex;
     flex-direction: column;
 }
+.content-left .heading h1:nth-child(1){
+    top:0;
+}
 .content-left .heading h1{
     font-family: "kajiro";
     color:white;
     font-weight: 100;
     font-size: 9vw;
+    position: absolute;
+    top:100%;
+    left:0;
+    
 }
 .content-left .heading{
     height: 9vw;
+    position: relative;
     overflow: hidden;
 }
 .content-left button{
