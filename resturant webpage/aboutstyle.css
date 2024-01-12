@@ -79,7 +79,7 @@ a:hover{
     top:50%;
     left:0%;
     transform: translate(0% ,-50%);
-    background-color: rgb(226, 226, 226);
+    background-color: antiquewhite;
 }
 .content-left{
     min-width:43%;
@@ -94,7 +94,7 @@ a:hover{
     border-bottom-right-radius: 15vw;
     padding: 5vh;
     object-fit: cover;
-    background-image: url("about.jpg");
+    background-image: url("food/13.jpg");
     background-position: center;
     background-size: cover;
 }
