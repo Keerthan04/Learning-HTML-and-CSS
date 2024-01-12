@@ -11,6 +11,7 @@
 html,body{
     height:100%;
     width: 100%;
+    overflow: hidden;
 }
 a{
     text-decoration: none;
@@ -150,4 +151,7 @@ a:hover{
     display: flex;
     align-items: center;
     gap: 40px;
+}
+.footer-left a:hover{
+    zoom: 105%;
 }
