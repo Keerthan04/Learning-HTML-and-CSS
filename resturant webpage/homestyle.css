@@ -52,7 +52,6 @@ a:hover{
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: red;
 }
 .nav-left img{
     height:20vh;
@@ -72,18 +71,21 @@ a:hover{
     position: absolute;
     top:50%;
     left:0;
-    transform: translate(0,-50%);
-    background-color: aqua;
+    transform: translate(0%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    max-width:70%;
+    height:9vw;
+    overflow: hidden;
+    text-align: start;
 }
 .heading h1{
-    font-size:7vw;
     font-family: "kajiro";
     color:white;
-    font-weight: 500;
-}.heading{
-    width: 100%;
-    overflow: hidden;
-    height:27vh;
-    background-color: red;
+    font-weight: 100;
+    font-size: 9vw;
 }
 
