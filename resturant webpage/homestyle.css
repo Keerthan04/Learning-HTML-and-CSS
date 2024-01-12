@@ -17,6 +17,7 @@ a{
     color: white;
     font-size: 17px;
     font-weight: 300;
+    pointer-events: all;
 }
 a:hover{
     zoom: 120%;
@@ -29,6 +30,11 @@ a:hover{
     width: 100%;
     height:100vh;
 }
+.back img{
+    width: 100%;
+    height:100vh;
+    object-fit: cover;
+}
 .top{
     position: absolute;
     top:0;
@@ -36,13 +42,12 @@ a:hover{
     width: 100%;
     height:100vh;
     display: flex;
-    background-color: black;
+    pointer-events: none;
 }
 .working-area{
     margin: 0 auto;
     width:80%;
     height: 100vh;
-    background-color: black;
     position: relative;
 }
 .nav{
@@ -67,25 +72,60 @@ a:hover{
     gap: 40px;
 }
 .content{
-    width:100%;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
     position: absolute;
     top:50%;
-    left:0;
-    transform: translate(0%,-50%);
+    left:0%;
+    transform: translate(0% ,-50%);
+    margin-top:10vh;
+}
+.content-left{
+    min-width:50%;
+    padding: 2vh;
+}
+.content-right{
+    width:25%;
+    color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-end;
 }
-.heading{
-    max-width:70%;
-    height:9vw;
-    overflow: hidden;
-    text-align: start;
+.content-left .heading h1:nth-child(1){
+    top:0;
 }
-.heading h1{
+.content-left .heading h1{
     font-family: "kajiro";
     color:white;
     font-weight: 100;
     font-size: 9vw;
+    position: absolute;
+    top:100%;
+    left:0;
+    
 }
-
+.content-left .heading{
+    height: 9vw;
+    position: relative;
+    overflow: hidden;
+}
+.content-left button{
+    font-size: 2.5vw;
+    padding: 0.8vw 4vw;
+    margin-top: 1vw;
+    background-color: rgb(226, 226, 226);
+    font-family: "kajiro";
+    pointer-events: all;
+    cursor: pointer;
+}
+.content-left button:hover{
+    zoom: 120%;
+}
+.content-right p{
+    text-align:left;
+    font-size:0.2;
+    font-weight: 700;
+    height:25vh;
+    padding:.8vh;
+}
