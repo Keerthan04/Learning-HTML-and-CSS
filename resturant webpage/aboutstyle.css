@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "gil-reg";
+}
+@font-face {
+    font-family: "gil-reg";
+    src: url("fonts/Gilroy-Regular.ttf");
+}
+html,body{
+    height:100%;
+    width: 100%;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 300;
+    pointer-events: all;
+}
+a:hover{
+    zoom: 120%;
+}
+.main{
+    width: 100%;
+    height:100vh;
+}
+.back{
+    width: 100%;
+    height:100vh;
+}
+.back img{
+    width: 100%;
+    height:100vh;
+    object-fit: cover;
+}
+.top{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100vh;
+    display: flex;
+    pointer-events: none;
+}
+.working-area{
+    margin: 0 auto;
+    width:100%;
+    position: relative;
+}
+.nav{
+    width:100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.nav-left img{
+    height:20vh;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.content{
+    width: 100%;
+    height: calc(100vh - 24vh);
+    display:flex;
+    justify-content: space-between;
+    position: absolute;
+    top:50%;
+    left:0%;
+    transform: translate(0% ,-50%);
+    padding: 5vh 0;
+    background-color: blue;
+}
+.content-left{
+    min-width:43%;
+    padding: 2vh;
+    background-color: red;
+    border-top-right-radius: 15vw;
+    border-bottom-right-radius: 15vw;
+}
+.content-right{
+    width:45%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content-right p{
+    text-align:left;
+    font-size:0.2;
+    font-weight: 700;
+    height:25vh;
+    padding:.8vh;
+}
+.footer{
+    position: absolute;
+    width: 100%;
+    width:100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    bottom:0;
+    color:white;
+}
+.footer-left{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.footer-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.footer-left a:hover{
+    zoom: 105%;
+}
