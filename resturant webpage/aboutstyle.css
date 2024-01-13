@@ -97,6 +97,7 @@ a:hover{
     background-image: url("food/13.jpg");
     background-position: center;
     background-size: cover;
+    border: 1px solid black;
 }
 #about{
     position: fixed;
