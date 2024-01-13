@@ -70,60 +70,99 @@ a:hover{
     align-items: center;
     gap: 40px;
 }
-.content{
+.content {
     width: 100%;
     height: calc(100vh - 24vh);
-    display:flex;
+    display: flex;
     justify-content: space-between;
     position: absolute;
-    top:50%;
-    left:0%;
-    transform: translate(0% ,-50%);
-    background-color: antiquewhite;
-}
-.content-left{
-    min-width:43%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.left-image{
-    width: 100%;
-    height: 80%;
-    border-top-right-radius: 15vw;
-    border-bottom-right-radius: 15vw;
-    padding: 5vh;
-    object-fit: cover;
-    background-image: url("food/13.jpg");
-    background-position: center;
-    background-size: cover;
-    border: 1px solid black;
-}
-#about{
-    position: fixed;
-    margin-bottom: 5vh;
-}
-
-.content-right{
-    width:55%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+.form {
+    width: 60%;
     height: 100%;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: #f2f2f2; /* Add a light background color */
+    padding: 20px; /* Adjust padding for better spacing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
 
-.descp{
-    margin-top: 5vh;
-    width:80%;
-    height:70%;
-    margin: 5vh auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: scroll;
+.form-work {
+width: 100%;
+height: 100%;
+margin: 0 auto;
+background-color: black;
+color: white;
+border-radius: 8px;
+border: 1px solid antiquewhite;
+display: block;
+padding: 3vw;
+overflow: scroll;
 }
+
+.form-work h3 {
+text-align: center;
+margin-bottom: 3vh;
+}
+
+input {
+    width: 100%;
+    height: 50px; /* Adjust the height for consistency */
+    font-size: 16px; /* Adjust the font size for consistency */
+    margin-top: 10px;
+    margin-bottom: 15px; /* Adjust the margin for spacing */
+    outline: none;
+    border: 2px solid #ccc; /* Add a border for a clean look */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    padding: 10px; /* Add padding for better spacing */
+    transition: border-color 0.3s ease; /* Add a transition effect */
+}
+
+input:focus {
+    border-color: #4CAF50; /* Change border color on focus */
+}
+
+
+input[type="tel"], input[type="email"] {
+width: 90%;
+margin-bottom: 2vh;
+margin-right: 2vw;
+}
+
+
+#table-preference {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.ph-em{
+display: flex;
+justify-content: space-around;
+}
+button {
+    width: 100%;
+    height: 50px;
+    background-color: #4CAF50; /* Button background color */
+    color: #fff; /* Button text color */
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a transition effect */
+}
+
+button:hover {
+    background-color: #45a049; /* Change background color on hover */
+}
+.form {
+    width: 80%; /* Adjust width for responsiveness */
+    max-width: 600px; /* Set a maximum width for larger screens */
+}
+
 /* Styling for Webkit browsers (Chrome, Safari) */
 .descp::-webkit-scrollbar {
     width: 12px; /* Set the width of the scrollbar */
@@ -150,28 +189,7 @@ a:hover{
     background-color: transparent; /* Set the track color to transparent */
 }
 
-.descp p{
-    text-align:left;
-    font-size:18px;
-    font-weight: 300;
-    margin-bottom: 2.5vh;
-}
-.descp h2{
-    font-size: 22px;
-    font-weight: 700;
-}
-.descp h1{
-    text-align: center;
-    font-size: 30px;
-}
-.content-right button{
-    font-size: 2vw;
-    padding: 0.5vw 2vw;
-    background-color: rgb(226, 226, 226);
-    pointer-events: all;
-    cursor: pointer;
-    border-radius: 15px;
-}
+
 .footer{
     position: absolute;
     width: 100%;

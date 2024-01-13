@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterChef-Food and Drinks</title>
+    <link href="reservestyle.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> 
+</head>
+<body>
+    <div class="main">
+        <div class="back">
+            <img src="2.jpg" alt="">
+        </div>
+        <div class="top">
+            <div class="working-area">
+                <div class="nav">
+                    <div class="nav-left">
+                        <img src="logo.png">
+                    </div>
+                    <div class="nav-right">
+                        <a href="home.html">Home</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="aboutus.html">About Us</a>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="form">
+                        <div class="form-work">
+                            <h3>Reserve a Table</h3>
+                            <form action="index." method="POST" data-validate="">
+                                <div>
+                                    
+                                    <input type="" id="fullname" placeholder="Full Name" length="6" maxlength="10" required/>
+                                </div>
+                                <div class="ph-em">
+                                    <div>
+                                        
+                                        <input type="tel" id="phone" placeholder="Phone number" pattern="[0-9]{10}" required/>
+                                    </div>
+                                    <div>
+                                        
+                                        <input type="email" id="email" placeholder="Email" required/>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="reservation_date">Date of Reservation:</label>
+                                    <input type="date" id="reservation_date" placeholder="Date of Reservation" required/>
+                                </div>
+                                <div>
+                                    <label for="reservation_time">Time of Reservations:</label>
+                                    <input type="time" id="reservation_time" required/>
+                                </div>
+                                <div>
+                                    <label for="quantity">Number of guests:</label>
+                                    <input type="number" id="quantity" placeholder="Number of guests" min="1" max="20" required/>
+                                </div>
+                                <div id="table_preference">
+                                    <label for="table_preference">Table Preference:</label>
+                                    <label for="indoor">Indoor</label>
+                                    <input type="radio" id="indoor" value="Indoor" name="table_preference" required/>
+                                    <label for="outdoor">Outdoor</label>
+                                    <input type="radio" id="outdoor" value="Outdoor" name="table_preference"/>
+                                    <label for="window_seat">Window Seat</label>
+                                    <input type="radio" id="window_seat" value="Window Seat" name="table_preference"/>
+                                    <label for="no_preference">No Preference</label>
+                                    <input type="radio" id="no_preference" value="No Preference" name="table_preference"/>
+                                </div>
+                                <div>
+                                    <label for="special_requests">Special Requests:</label>
+                                    <textarea id="special_requests" placeholder="Special Requests" rows="5" cols="25"></textarea>
+                                </div>
+                                <div>
+                                    <label for="dietary_requests">Alergies or Dietery Requests:</label>
+                                    <textarea id="dietary_requests" placeholder="Alergies or Dietery Requests" rows="2" cols="25"></textarea>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="tc" required/>
+                                    <label for="tc">I confirm that the above information is correct and I understand the restaurant's reservation and cancellation policies.</label>
+                                </div>
+                                <div>
+                                    <button type="submit">Submit</button>
+                                </div>
+                            </form>
+                            <script type="text/">
+                                (function() {
+                                var forms = document.getElementsByClassName('form-work');
+                                        var form = null;
+                                        for (var i =0; i < forms.length; i {
+                                            if (forms[i].getAttribute('data-validate') === 'true') {
+                                                form = forms[i];
+                                                break;
+                                            }
+                                        }
+                                        if (form !== null) {
+                                            form.addEventListener('submit', function(event) {
+                                                event.preventDefault();
+                                                var elements = form.elements;
+                                                for (var i = 0; i < elements.length; i++) {
+                                                    if (elements[i].hasAttribute('required') && elements[i].value.length === 0) {
+                                                        alert('Please fill in all required fields.');
+                                                        return;
+                                                    }
+                                                    if (elements[i].type === 'email' && !validateEmail(elements[i].value)) {
+                                                        alert('Please enter a valid email address.');
+                                                        return;
+                                                    }
+                                                    if (elements[i].type === 'phone' && !validatePhoneNumber(elements[i].value)) {
+                                                        alert('Please enter a valid phone number.');
+                                                        return;
+                                                    }
+                                                    if (elements[i].type === 'date' && !validateDate(elements[i].value)) {
+                                                        alert('Please enter a valid date.');
+                                                        return;
+                                                    }
+                                                }
+                                                form.submit();
+                                            }, false);
+                                        }
+                                        function validateEmail(email) {
+                                            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                                            return re.test(String(email).toLowerCase());
+                                        }
+                                        function validatePhoneNumber(phoneNumber) {
+                                            var re = /^\d{10}$/;
+                                            return re.test(phoneNumber);
+                                        }
+                                        function validateDate(dateString) {
+                                            var re = /^\d{4}-\d{2}-\d{2}$/;
+                                            if (!re.test(dateString)) {
+                                                return false;
+                                            }
+                                            var date = new Date(dateString);
+                                            return date.getFullYear() === Number(dateString.substr(0, 4)) && date.getMonth() + 1 === Number(dateString.substr(5, 2)) && date.getDate() === Number(dateString.substr(8, 2));
+                                        }
+                                    })();
+                            </script>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="footer-left">
+                        <p>+91 9599124155</p>
+                        <p>&copy; 2024 Masterchef-Food and Drinks. All Rights Reserved.</p>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                    </div>
+                    <div class="footer-right">
+                        <a href="https://www.linkedin.com/in/johnathanspectermba/" target="_blank">
+                            <img class="icons" src="Twitter.svg" title="twitter"></a>
+                        <a href="https://www.linkedin.com/in/johnathanspectermba/" target="_blank">
+                            <img class="icons" src="LinkedIn.svg" title="twitter"></a>
+                        <a href="https://www.linkedin.com/in/johnathanspectermba/" target="_blank">
+                            <img class="icons" src="Github.svg" title="twitter"></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="scriptmenu.js"></script>
+</body>
+</html>
