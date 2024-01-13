@@ -12,7 +12,7 @@
 <body>
     <div class="main">
         <div class="back">
-            <img src="2.jpg" alt="">
+            <img src="aboutback.jpg" alt="">
         </div>
         <div class="top">
             <div class="working-area">
@@ -59,15 +59,15 @@
                                     <input type="number" id="quantity" placeholder="Number of guests" min="1" max="20" required/>
                                 </div>
                                 <div id="table_preference">
-                                    <label for="table_preference">Table Preference:</label>
-                                    <label for="indoor">Indoor</label>
-                                    <input type="radio" id="indoor" value="Indoor" name="table_preference" required/>
-                                    <label for="outdoor">Outdoor</label>
-                                    <input type="radio" id="outdoor" value="Outdoor" name="table_preference"/>
-                                    <label for="window_seat">Window Seat</label>
-                                    <input type="radio" id="window_seat" value="Window Seat" name="table_preference"/>
-                                    <label for="no_preference">No Preference</label>
-                                    <input type="radio" id="no_preference" value="No Preference" name="table_preference"/>
+                                    <div><label for="table-preference">Table Preference:</label></div>
+                                    <div class="rb">  
+                                        <input type="radio" id="indoor" value="Indoor" name="tables_preference" />
+                                        <label for="indoor">Indoor</label>
+                                    </div>
+                                    <div class="rb">                                       
+                                        <input type="radio" id="outdoor" value="Outdoor" name="tables_preference"/>
+                                        <label for="outdoor">Outdoor</label>
+                                    </div>
                                 </div>
                                 <div>
                                     <label for="special_requests">Special Requests:</label>
@@ -77,7 +77,7 @@
                                     <label for="dietary_requests">Alergies or Dietery Requests:</label>
                                     <textarea id="dietary_requests" placeholder="Alergies or Dietery Requests" rows="2" cols="25"></textarea>
                                 </div>
-                                <div>
+                                <div id="check">
                                     <input type="checkbox" id="tc" required/>
                                     <label for="tc">I confirm that the above information is correct and I understand the restaurant's reservation and cancellation policies.</label>
                                 </div>

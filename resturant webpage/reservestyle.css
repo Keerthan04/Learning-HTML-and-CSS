@@ -15,7 +15,7 @@ html,body{
 }
 a{
     text-decoration: none;
-    color: white;
+    color: antiquewhite;
     font-size: 17px;
     font-weight: 300;
     pointer-events: all;
@@ -81,111 +81,131 @@ a:hover{
     transform: translateY(-50%);
   }
   
-.form {
-    width: 60%;
-    height: 100%;
+  .form {
+    width: 80%;
+    max-width: 600px;
     margin: 0 auto;
     border-radius: 8px;
-    background-color: #f2f2f2; /* Add a light background color */
-    padding: 20px; /* Adjust padding for better spacing */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: scroll;
 }
 
 .form-work {
-width: 100%;
-height: 100%;
-margin: 0 auto;
-background-color: black;
-color: white;
-border-radius: 8px;
-border: 1px solid antiquewhite;
-display: block;
-padding: 3vw;
-overflow: scroll;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    color: antiquewhite;
+    border-radius: 8px;
+    border: 1px solid white;
+    padding: 3vw;
+    font-weight: 400;
 }
 
 .form-work h3 {
-text-align: center;
-margin-bottom: 3vh;
+    text-align: center;
+    margin-bottom: 3vh;
 }
 
-input {
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+input, textarea {
     width: 100%;
-    height: 50px; /* Adjust the height for consistency */
-    font-size: 16px; /* Adjust the font size for consistency */
-    margin-top: 10px;
-    margin-bottom: 15px; /* Adjust the margin for spacing */
+    height: 40px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     outline: none;
-    border: 2px solid #ccc; /* Add a border for a clean look */
-    border-radius: 5px; /* Add border-radius for rounded corners */
-    padding: 10px; /* Add padding for better spacing */
-    transition: border-color 0.3s ease; /* Add a transition effect */
+    transition: border-color 0.3s ease;
 }
 
-input:focus {
-    border-color: #4CAF50; /* Change border color on focus */
+input:focus, textarea:focus {
+    border: 3px solid black;
 }
 
-
-input[type="tel"], input[type="email"] {
-width: 90%;
-margin-bottom: 2vh;
-margin-right: 2vw;
+.ph-em {
+    display: flex;
+    justify-content: space-between;
 }
 
-
-#table-preference {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
+#table_preference {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
 }
-.ph-em{
-display: flex;
-justify-content: space-around;
+
+.rb {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Adjust margin between radio button groups */
+}
+
+.rb input {
+    margin-right: 5px; /* Adjust margin for better spacing */
+}
+
+.rb label {
+    font-size: 16px;
+}
+
+/* Optional: Add hover effect for labels */
+.rb label:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#check{
+    display: flex;
+}
+#check input{
+    height:20px;
 }
 button {
     width: 100%;
     height: 50px;
-    background-color: #4CAF50; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: black;
+    color: #fff;
     font-size: 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Add a transition effect */
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #45a049; /* Change background color on hover */
-}
-.form {
-    width: 80%; /* Adjust width for responsiveness */
-    max-width: 600px; /* Set a maximum width for larger screens */
+
+#tc {
+    margin-right: 5px;
 }
 
 /* Styling for Webkit browsers (Chrome, Safari) */
-.descp::-webkit-scrollbar {
+.form::-webkit-scrollbar {
     width: 12px; /* Set the width of the scrollbar */
 }
 
-.descp::-webkit-scrollbar-thumb {
+.form::-webkit-scrollbar-thumb {
     background-color: transparent; /* Set the thumb color to transparent */
 }
 
-.descp::-webkit-scrollbar-track {
+.form::-webkit-scrollbar-track {
     background-color: transparent; /* Set the track color to transparent */
 }
 
 /* Styling for Firefox */
-.descp {
+.form {
     scrollbar-width: thin; /* Set the width of the scrollbar */
 }
 
-.descp::-moz-scrollbar-thumb {
+.form::-moz-scrollbar-thumb {
     background-color: transparent; /* Set the thumb color to transparent */
 }
 
-.descp::-moz-scrollbar-track {
+.form::-moz-scrollbar-track {
     background-color: transparent; /* Set the track color to transparent */
 }
 
@@ -200,7 +220,7 @@ button:hover {
     align-items: center;
     padding: 20px;
     bottom:0;
-    color:white;
+    color:antiquewhite;
 }
 .footer-left{
     display: flex;
