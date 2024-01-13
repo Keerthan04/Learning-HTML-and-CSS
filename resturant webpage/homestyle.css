@@ -119,9 +119,10 @@ a:hover{
     font-family: "kajiro";
     pointer-events: all;
     cursor: pointer;
+    border-radius: 20px;
 }
 .content-left button:hover{
-    zoom: 120%;
+    zoom: 105%;
 }
 .content-right p{
     text-align:left;
